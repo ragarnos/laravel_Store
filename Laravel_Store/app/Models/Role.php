@@ -16,16 +16,16 @@ class Role extends Model
 
     public function scopeCustomer($query)
     {
-        return $query->getRole($query);
+        return $this->getRole($query);
     }
 
     public function scopeAdmin($query)
     {
-        return $query->getRole($query, 'admin');
+        return $this->getRole($query, 'admin');
     }
 
     protected function getRole($query, $role='customer')
     {
-        return $query->where('name', '=', config('constants.db.roles.' . $role));
+        return $this->where('name', '=', config('constants.db.roles.' . $role));
     }
 }

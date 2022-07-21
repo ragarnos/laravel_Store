@@ -20,14 +20,14 @@ class UserFactory extends Factory
     public function definition()
     {
         $role = Role::customer()->first();
-
+        $faker = \Faker\Factory::create();
         return [
             'role_id' => $role->id,
-            'name' => fake()->name(),
-            'surname' => fake()->lastName,
-            'birthdate' => fake()->dateTimeBetween('-70 years', '-18 years')->format('Y-m-d'),
-            'email' => fake()->unique()->safeEmail(),
-            'phone' => fake()->unique()->e164PhoneNumber,
+            'name' => $faker->name,
+            'surname' => $faker->lastName(),
+            'birthdate' => $faker->dateTimeBetween('-70 years', '-18 years')->format('Y-m-d'),
+            'email' => $faker->unique()->safeEmail(),
+            'phone' => $faker->unique()->e164PhoneNumber,
             'email_verified_at' => now(),
             'password' => Hash::make('test1234'),
             'remember_token' => Str::random(10),
