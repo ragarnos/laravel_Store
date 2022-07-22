@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+Route::prefix('posts')->name('posts')->group(function(){
+    Route::get('/', [Controller::class, 'index']);
+    Route::post('/', [Controller::class, 'store'])->name('.store');
+    Route::get('create', [Controller::class, 'index'])->name('.create');
+    Route::get('{post}/create', [Controller::class, 'index'])->name('.update');
 });
