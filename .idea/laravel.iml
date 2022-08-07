@@ -126,6 +126,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/doctrine/dbal" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/doctrine/event-manager" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/laravel/breeze" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

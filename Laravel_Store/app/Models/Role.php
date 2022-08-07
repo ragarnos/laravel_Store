@@ -24,8 +24,12 @@ class Role extends Model
         return $this->getRole($query, 'admin');
     }
 
-    protected function getRole($query, $role='customer')
+    protected function getRole($query, $role = 'customer')
     {
-        return $this->where('name', '=', config('constants.db.roles.' . $role));
+        return $query->where(
+            'name',
+            '=',
+            config('constants.db.roles.' . $role)
+        );
     }
 }
