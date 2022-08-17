@@ -17,11 +17,9 @@
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/symfony/polyfill-php72" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/symfony/error-handler" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/symfony/event-dispatcher-contracts" />
-      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/symfony/polyfill-php73" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/symfony/polyfill-intl-idn" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/symfony/console" />
-      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/symfony/polyfill-iconv" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/symfony/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/symfony/var-dumper" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/symfony/http-foundation" />
@@ -33,13 +31,10 @@
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/symfony/translation" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/symfony/process" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/facade/ignition-contracts" />
-      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/facade/flare-client-php" />
-      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/facade/ignition" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/fakerphp/faker" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/phpspec/prophecy" />
-      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/fruitcake/laravel-cors" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/phpoption/phpoption" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/dflydev/dot-access-data" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/webmozart/assert" />
@@ -83,7 +78,6 @@
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/laravel/serializable-closure" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/psy/psysh" />
-      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/asm89/stack-cors" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/phpunit/php-code-coverage" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/brick/math" />
@@ -94,7 +88,6 @@
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/phpunit/php-timer" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/nunomaduro/collision" />
-      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/opis/closure" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/nesbot/carbon" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/nette/schema" />
@@ -109,7 +102,6 @@
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/phpdocumentor/type-resolver" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/phpdocumentor/reflection-common" />
-      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/league/config" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/league/commonmark" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/nikic/php-parser" />
@@ -126,7 +118,16 @@
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/doctrine/dbal" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/doctrine/event-manager" />
       <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/doctrine/deprecations" />
-      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/laravel/breeze" />
+      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/laravel/ui" />
+      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/spatie/backtrace" />
+      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/spatie/flare-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/spatie/ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/spatie/laravel-ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/symfony/mailer" />
+      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/fruitcake/php-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/nunomaduro/termwind" />
+      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/fruitcake/laravel-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/Laravel_Store/vendor/twbs/bootstrap" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

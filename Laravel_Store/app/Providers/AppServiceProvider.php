@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Database\Factories\UserFactory;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,9 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->bind(UserRepository::class, function()
-        {
-            return new UserFactory();
-        });
+        Paginator::useBootstrapFive();
     }
 }
