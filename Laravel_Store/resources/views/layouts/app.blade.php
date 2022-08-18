@@ -32,10 +32,9 @@
                     <ul class="navbar-nav me-auto">
                         @auth
                             @if(Request::is('admin/*'))
-                                
+                                @include('navigations.admin_nav')
                             @endif
                         @endauth
-                        @include('navigations.admin_nav')
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -66,6 +65,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('account.index') }}">
+                                        {{ __('Account') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

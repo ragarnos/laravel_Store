@@ -1,11 +1,12 @@
 <?php
 
 use App\Models\User;
-use App\Helpers\Enums\RolesEnum;
+use App\Helpers\Enums\Roles;
+
 if (!function_exists('isAdmin'))
 {
     function isAdmin(User $user): bool
     {
-        return $user->role()->name === RolesEnum::Admin->value;
+        return $user->role->name === \App\Helpers\Enums\RolesEnum::Admin->value;
     }
 }

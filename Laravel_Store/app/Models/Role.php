@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Models;
-use App\Helpers\Enums\Roles;
+
+use App\Helpers\Enums\RolesEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -29,7 +30,7 @@ class Role extends Model
         return $query->where(
             'name',
             '=',
-            Roles::findByKey(ucfirst($role))->value
+            RolesEnum::findByKey(ucfirst($role))->value
         );
     }
 }
