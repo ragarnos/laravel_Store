@@ -32,9 +32,10 @@
                     <ul class="navbar-nav me-auto">
                         @auth
                             @if(Request::is('admin/*'))
-                                @include('navigations.admin_nav')
+                                
                             @endif
                         @endauth
+                        @include('navigations.admin_nav')
                     </ul>
 
                     <!-- Right Side Of Navbar -->

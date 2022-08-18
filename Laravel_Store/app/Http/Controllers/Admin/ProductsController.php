@@ -18,21 +18,29 @@ class ProductsController extends Controller
 {
     public function __construct(protected ProductRepositoryContract $productRepository) {}
 
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function index()
     {
         $products = Product::with('category')->paginate(10);
-
         return view('admin/products/index', compact('products'));
     }
 
-
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function create()
     {
         $categories = Category::all();
         return view('admin/products/create', compact('categories'));
     }
 
-
+    /**
+     * @param CreateProductRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Throwable
+     */
     public function store(CreateProductRequest $request)
     {
         if ($product = $this->productRepository->create($request)) {
@@ -42,14 +50,22 @@ class ProductsController extends Controller
         }
     }
 
-
+    /**
+     * @param Product $product
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function edit(Product $product)
     {
         $categories = Category::all();
         return view('admin/products/edit', compact('product', 'categories'));
     }
 
-
+    /**
+     * @param UpdateProductRequest $request
+     * @param Product $product
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Throwable
+     */
     public function update(UpdateProductRequest $request, Product $product)
     {
         if ($this->productRepository->update($product, $request)) {
@@ -59,6 +75,10 @@ class ProductsController extends Controller
         }
     }
 
+    /**
+     * @param Product $product
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function destroy(Product $product)
     {
         $product->delete();

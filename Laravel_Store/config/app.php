@@ -231,5 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
-
+    'aliases' => \Illuminate\Support\Facades\Facade::defaultAliases()->merge([
+        // 'ExampleClass' => App\Example\ExampleClass::class,
+    ])->toArray(),
 ];

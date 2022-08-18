@@ -121,7 +121,8 @@
       <path value="$PROJECT_DIR$/Laravel_Store/vendor/fruitcake/php-cors" />
       <path value="$PROJECT_DIR$/Laravel_Store/vendor/nunomaduro/termwind" />
       <path value="$PROJECT_DIR$/Laravel_Store/vendor/fruitcake/laravel-cors" />
-      <path value="$PROJECT_DIR$/Laravel_Store/vendor/twbs/bootstrap" />
+      <path value="$PROJECT_DIR$/Laravel_Store/vendor/bumbummen99/shoppingcart" />
+      <path value="$PROJECT_DIR$/Laravel_Store/vendor/willvincent/laravel-rateable" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
