@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Services\ImagesService;
+use App\Jobs\OrderCreatedNotificationJob;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('send', function () {
+    $order = \App\Models\Order::all()->random();
+    OrderCreatedNotificationJob::dispatch($order)->onQueue('emails');
+});
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::delete(
@@ -42,6 +46,11 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'admin'])->group(fun
     })->name('dashboard');
 
     Route::resource('products', \App\Http\Controllers\Admin\ProductsController::class)->except(['show']);
+    Route::name('orders')->group(function () {
+        Route::get('orders', [\App\Http\Controllers\Admin\OrdersController::class, 'index'])->name('.index');
+        Route::get('orders/{order}/edit', [\App\Http\Controllers\Admin\OrdersController::class, 'edit'])->name('.edit');
+        Route::put('orders/{order}', [\App\Http\Controllers\Admin\OrdersController::class, 'update'])->name('.update');
+    });
 });
 
 Route::middleware('auth')->group(function() {
@@ -59,6 +68,7 @@ Route::middleware('auth')->group(function() {
             ->name('update')
             ->middleware('can:update,user');
         Route::get('wishlist', \App\Http\Controllers\Account\WishListController::class)->name('wishlist');
+        Route::get('telegram/callback', \App\Http\Controllers\TelegramCallbackController::class)->name('telegram.callback');
     });
 });
 
