@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Helpers\Enums\OrderStatusesEnum;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Notifications\Notifiable;
 
 class Order extends Model
@@ -44,5 +46,12 @@ class Order extends Model
     public function transaction()
     {
         return $this->belongsTo(Transaction::class);
+    }
+
+    public function inProcess(): Attribute
+    {
+        return new Attribute(
+            get: fn() => $this->status->name === OrderStatusesEnum::InProcess->value
+        );
     }
 }

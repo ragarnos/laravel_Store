@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Payments;
 
+use App\Helpers\Enums\OrderStatusesEnum;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use App\Events\OrderCreatedEvent;
 use App\Helpers\TransactionDataAdapter;
 use App\Http\Controllers\Controller;
@@ -70,6 +72,7 @@ class PaypalPaymentController extends Controller
             DB::commit();
 
             return response()->json($result);
+            return response()->json(['error' => "Some error here"], 422);
         } catch (\Exception $exception) {
             DB::rollBack();
             logs()->warning($exception);

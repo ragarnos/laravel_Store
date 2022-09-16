@@ -5,10 +5,12 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/sass/app.scss',
+                'resources/css/iziToast.css',
                 'resources/js/app.js',
                 'resources/js/images-preview.js',
                 'resources/js/images-actions.js',
                 'resources/js/product-actions.js',
+                'resources/js/iziToast.js',
                 'resources/js/paypal-payments.js',
             ],
             refresh: true,
